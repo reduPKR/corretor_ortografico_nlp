@@ -69,13 +69,7 @@ class NLPV1:
             palavras += self.troca_letras(fatias)
             palavras += self.inverter_letras(fatias)
 
-        set(palavras)
-        # Econtrar os melhores candidatos
-        for item in palavras:
-            if item in normalizada:
-                melhores.append(item)
-
-        return melhores
+        return set(palavras)
 
     def insere_letras(self,fatias):
         novas_palavras = []
